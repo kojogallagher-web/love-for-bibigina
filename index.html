@@ -85,7 +85,6 @@ opacity:0;
 
   <script>
 let images = [
-    let images = [
     "image-29.png",
     "image-37.png",
     "image-41.png",
@@ -94,6 +93,18 @@ let images = [
     "image-46.png",
     "image-47.png",
     "image-51.png"
+];
+
+let index = 0;
+
+setInterval(() => {
+    index++;
+    if (index >= images.length) {
+        index = 0;
+    }
+
+    document.getElementById("slide").src = images[index];
+}, 3000);
 ];
     
     
