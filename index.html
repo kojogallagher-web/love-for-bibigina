@@ -1,21 +1,109 @@
-<div class="message">
-ถึงบิบี๋จีน่า🐰🤍<br><br>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ถึงบิบี๋จีน่า 🐰🤍</title>
 
-เค้ามาง้อเธอนะ...<br><br>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-เค้าขอโทษสำหรับทุกอย่างที่ผ่านมา ขอโทษที่บางครั้งเค้าทำตัวไม่ดี ขอโทษที่ทำให้เธอเสียใจ หรือทำตัวไม่น่ารักใส่เธออยู่บ่อย ๆ<br><br>
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(180deg,#ffd6e7,#fff5f8);
+    overflow-x:hidden;
+    text-align:center;
+    color:#444;
+}
 
-แต่มีอย่างหนึ่งที่เค้าอยากให้เธอรู้ไว้เสมอ คือเค้ารักเธอมากจริง ๆ นะ<br><br>
+.container{
+    max-width:700px;
+    margin:30px auto;
+    padding:20px;
+}
 
-กว่าจะมีวันนี้ กว่าที่เราจะเดินมาถึงตรงนี้ด้วยกัน มันไม่ใช่เรื่องง่ายเลย และทุกช่วงเวลาที่มีเธออยู่ข้าง ๆ มันมีค่ากับเค้ามากจริง ๆ<br><br>
+h1{
+    color:#ff4f88;
+    margin-bottom:20px;
+}
 
-เธอกลายเป็นโลกทั้งใบของเค้าไปแล้ว...<br><br>
+.slider{
+    width:100%;
+    max-width:420px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
 
-เค้าไม่อยากให้เธอหายไปไหนเลย เพราะถ้าวันหนึ่งไม่มีเธออยู่ตรงนี้ เค้าคงเสียใจมาก ๆ<br><br>
+.slider img{
+    width:100%;
+    display:block;
+    transition:opacity .8s;
+}
 
-ถึงเค้าจะมีข้อเสีย มีนิสัยที่ต้องแก้อีกเยอะ แต่เค้าก็ยังอยากพยายามเป็นคนที่ดีกว่านี้เพื่อเธอ<br><br>
+.message{
+    margin-top:25px;
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    line-height:1.9;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
 
-ขอบคุณนะ ที่เข้ามาเปลี่ยนโลกของเค้าให้สดใสอีกครั้ง<br><br>
+.heart{
+    position:fixed;
+    bottom:-40px;
+    font-size:24px;
+    animation:float linear infinite;
+}
 
-❤️ เค้ารักเธอมาก ๆ นะ บิบี๋จีน่า🐰🤍 ❤️
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="slider">
+<img id="slide" src="image-29.png">
 </div>
+
+  <script>
+let images = [
+    "image-29.png",
+    "image-30.png",
+    "image-31.png"
+];
+
+let index = 0;
+
+setInterval(()=>{
+    index++;
+    if(index >= images.length){
+        index = 0;
+    }
+
+    document.getElementById("slide").src = images[index];
+
+},3000);
+</script>
+
+</div>
+
+</body>
+</html>
